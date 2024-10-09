@@ -17,7 +17,7 @@ func main() {
 		log.Fatalf("parse rtsp url error, err=%s", err)
 	}
 
-	log.Printf("url scheme=%s, host=%s", parsedURL.Scheme, parsedURL.Host)
+	log.Printf("url=%s", parsedURL.String())
 
 	c := gortsplib.Client{}
 	c.Start(parsedURL.Scheme, parsedURL.Host)
